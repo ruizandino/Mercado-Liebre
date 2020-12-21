@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head font-family: Roboto, sans-serif;>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mercado Liebre</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link rel="stylesheet" href="/stylesheets/estilos.css">
+</head>
+
+<body class="gris-claro">
+
+	<%- include('./partials/header') %>
+	
+
+	<section id="banner">
+		<img src="/images/img-home-banner.jpg" class="banner">
+	</section>
+
+	<main id="index" class="gris-claro">
+
+		<div class="gris-claro">
+			<h2 class="titulares">Todos los productos</h2>
+		</div>
+
+		<section id="basado-en-visitas">
+
+			<% for (var i= 0; i < productos.length; i++){ %>
+			<article>
+				<a href="/products/detail/<%=productos[i].id %>/">
+					<img src="/images/products/<%= productos[i].image %>" alt="">
+				</a>
+				<div class="datos-articulo">
+					<div class="camion"><i class="fas fa-truck verde"></i></div>
+					<p class="precios">
+						$<%= toThousand(productos[i].price - (productos[i].price * productos[i].discount / 100)) %></p>
+					<%if(productos[i].discount != 0){%>
+					<p class="descuentos"><%= productos[i].discount %>% OFF</p>
+					<%}%>
+							<p class="descripciones gris-oscuro"><%=productos[i].description%></p>
+				</div>
+			</article>
+			<% } %>
+		</section>
+	</main>
+	
+	
+	<%- include('./partials/footer') %>
+
+</body>
+</html>

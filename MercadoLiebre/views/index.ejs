@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head font-family: Roboto, sans-serif;>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Liebre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheets/estilos.css">
+
+</head>
+
+<body class="gris-claro">
+
+    <%- include('./partials/header') %>
+
+
+    <section id="banner">
+        <img src="/images/img-home-banner.jpg" class="banner">
+    </section>
+
+    <main id="index" class="gris-claro">
+
+        <div class="gris-claro">
+            <h2 class="titulares">Basado en tu última vista</h2>
+        </div>
+
+        <section id="basado-en-visitas">
+
+            <%  var cat = "visited"  %>
+            <%- include('./partials/productIndex', {cat}) %>
+
+        </section>
+
+        <div class="gris-claro">
+            <h2 class="titulares">Ofertas</h2>
+        </div>
+
+        <section id="ofertas">
+
+            <%  var cat = "in-sale"  %>
+            <%- include('./partials/productIndex', {cat}) %>
+
+        </section>
+
+    </main>
+    
+    <%- include('./partials/footer') %>
+
+</body>
+</html>

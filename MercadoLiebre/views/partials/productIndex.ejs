@@ -1,0 +1,21 @@
+<% for (var i= 0; i < productos.length; i++){ %>
+    <% if(productos[i].category == cat){ %>
+
+        <article>
+            <a href="/products/detail/<%=productos[i].id %>/">
+            <img src="/images/products/<%= productos[i].image %>" alt="">
+            </a>
+            <div class="datos-articulo">                
+                <div class="camion"><i class="fas fa-truck verde"></i></div>
+                <p class="precios">$<%= toThousand(productos[i].price - (productos[i].price * productos[i].discount / 100)) %></p>
+                <%if(productos[i].discount != 0){%>
+                <p class="descuentos"><%= productos[i].discount %>% OFF</p>
+                <%}%>
+                <p class="descripciones gris-oscuro"><%=productos[i].description%></p>
+            </div>
+        </article>
+
+    <% }%>
+    <% } %>
+
+

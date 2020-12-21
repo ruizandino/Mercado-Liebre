@@ -1,0 +1,457 @@
+* {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.logoybarra {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+div#logo {
+    margin: auto;
+    width: 200px;
+    padding: 5px;
+}
+
+div#barra-busqueda {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    width: 50%;
+    min-width: 200px;
+}
+
+input#search {
+    border: 0px;
+    padding: 10px;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+.fa-search {
+    padding-right: 10px;
+}
+
+div#cuotas {
+    margin-top: 20px;
+    text-align: center;
+}
+
+nav#barra-navegacion {
+    height: 50%;
+    width: 50%;
+    display: none;
+}
+
+.boton-menu {
+    height: 40px;
+    width: 40px;
+    background-color: #0044AA;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.boton-menu:hover {
+    background-color: #0022AA;
+    cursor: pointer;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+}
+
+main#index {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main#index section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main#index section article {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    width: 100%;
+}
+
+main#index section article img {
+    display: inline-block;
+    width: 100%;
+}
+
+.datos-articulo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.camion {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row-reverse;
+    margin-top: -12px;
+}
+
+.fa-truck {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: solid 1px #39b54a;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+
+article:hover .fa-truck {
+    transform: rotateZ(360deg); /*rota el icono del camion*/
+    transition-duration: 2s;
+}
+
+.datos-articulo {
+    display: flex;
+    border-top: solid 1px #ebebeb;
+    width: 100%;
+}
+
+.precio-y-descuento {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.precios {
+    margin-right: 10px;
+}
+
+.descripciones {
+    text-align: left;
+}
+
+.descripciones {
+    display: none;    
+}
+
+.descripciones:hover {
+    display: block;
+}
+
+main#index article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+article:hover .descripciones {
+    display: block;
+
+}
+
+footer {
+    padding: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+footer article {
+    margin-top: 20px;
+}
+
+.icono-footer {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+div#copyright {
+    text-align: left;
+    margin-top: 40px;
+}
+
+/*-----------------login y registro------------------------------*/
+
+.input-text-email-date {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 0px
+}
+
+main form button {
+    color: white;
+    background-color: #0044AA;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 0px
+}
+
+main form button:hover {
+    background-color: #0022AA;
+}
+
+button#reset {
+    color: white;
+    background-color: #AA0044;
+}
+
+button#reset:hover {
+    background-color: #CC1155;
+}
+
+.inputs-principales {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.perfil-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.rb {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+    justify-content: space-between;
+    
+}
+
+.intereses {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.chk {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80px;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+/*COLORES*/
+
+.amarillo {
+    background-color: #EAC926;
+}
+
+.azul {
+    color: #03264C;
+}
+
+.celeste {
+    color: #1259c3;
+}
+
+.gris-oscuro {
+    color: #666;
+}
+
+.gris-claro {
+    background-color: #ebebeb;
+}
+
+.verde {
+    color: #39b54a;
+}
+
+/*TEXTO*/
+
+.tipografia-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.titulares {
+    font-size: 24px;
+}
+
+.precios {
+    font-size: 18px;
+}
+
+.descuentos {
+    font-size: 16px;
+    color: #39b54a;
+}
+
+.descripciones {
+    font-size: 16px;
+}
+
+@media(min-width: 361px) {
+    main#index section article {
+        width: 41%;
+    }
+    form#register {
+        padding: 0px 30px 30px 30px;
+    }
+    form#login {
+        padding: 0px 30px 30px 30px;
+    }
+}
+
+@media(min-width: 769px) {
+    main#index section article {
+        width: 21%;
+    }
+    .boton-menu {
+        display: none;
+    }
+    nav#barra-navegacion {
+        margin-top: 20px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    nav#barra-navegacion nav ul {
+        list-style-type: none;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .nav-izquierda {
+        display: flex;
+        width: 35%;
+    }
+    .nav-derecha {
+        display: flex;
+        width: 34%;
+    }
+    form#register {
+        padding: 0px 120px 120px 120px;
+    }
+    form#login {
+        padding: 0px 120px 120px 120px;
+    }
+}
+
+/*----------------Detalle del producto---------------------*/
+
+#productDetail p {
+    font-size: 16px;
+}
+
+main#productDetail {
+    padding: 5px;
+    padding:15px
+
+}
+
+.fa-credit-card {
+    font-size: 16px;
+    margin-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-shipping-fast {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#productDetail h1 {
+    font-size: 24px;
+}
+
+#productDetail .card {
+    background-color: white;
+    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+}
+
+#productDetail img {
+    width: 100%;
+}
+
+#productDetail article.description p {
+    font-size: 16px;
+}
+
+#productDetail article.name p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+p#tachado {
+    text-decoration: line-through;
+    margin-right: 5px;
+}
+
+#productDetail article.price p {
+    font-size: 40px;
+}
+
+#productDetail section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+}
+
+#productDetail article {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+#productDetail article.discount {
+    padding-bottom: 0px;
+}
+
+#productDetail .botones{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 80%;
+}
+
+#productDetail button {
+    color: white;
+    background-color: #0044AA;
+    width: 100%;
+    border-radius: 5px;
+    border: 0px
+}
+
+#productDetail button:hover {
+    background-color: #0022AA;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= product.name %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheets/estilos.css">
+
+</head>
+
+<body>
+   
+    <%- include('./partials/header') %>
+
+    <main id="productDetail" class="gris-claro">
+
+        <h1 class="gris-oscuro"> 
+            <%= product.name %>
+        </h1>
+
+        <section class="card">
+
+            <section class="img-desc">
+                <article class="image">
+                    <img src="/images/products/<%= product.image %>" alt="">
+                </article>
+                <article class="description">
+                    <p><%= product.description %></p>
+
+                </article>
+            </section>
+
+            <section class="productInfo">
+                <article class="name">
+                    <p><%= product.name %></p>
+
+                </article>
+                <% if(product.discount != 0){%>
+                <article class="discount verde">
+                    <p id="tachado" class="tachado">$<%= toThousand(product.price)%></p>
+                    <p><%= product.discount %>% OFF</p>
+                </article>
+                <%}%>
+                <article class="price">
+                    <p>$<%= toThousand(product.price - (product.price * product.discount / 100))%>
+                </p>
+                </article>
+                <article class="fees">
+                    <i class="fas fa-credit-card verde"></i>
+                    <p class="gris-oscuro">Paga en 12 cuotas sin interes</p>
+                </article>
+                <article class="shipping">
+                    <i class="fas fa-shipping-fast verde"></i>
+                    <p class="gris-oscuro">Retiro gratis en locales del vendedor</p>
+                </article>
+                <section class="botones">
+
+                    <form action="">
+                        <button type="submit">COMPRAR AHORA</button>
+                    </form>
+                    <form action="/products/edit/<%= product.id %>">
+                        <button type="submit">EDITAR</button>
+                    </form>
+                    <form action="/products/delete/<%= product.id %>">
+                        <button type="submit">ELIMINAR</button>
+                    </form>
+                </section>
+
+
+            </section>
+
+        </section>
+    </main>
+
+  
+    <%- include('./partials/footer') %>
+
+</body>
+
+</html>

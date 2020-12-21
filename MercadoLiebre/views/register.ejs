@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheets/estilos.css">
+
+</head>
+
+<body>
+
+    <%- include('./partials/header') %>
+
+    <main class="gris-claro">
+
+
+        <form id="register" action="/register" method="POST">
+
+            <div class="inputs-principales">           
+
+
+            <input class="input-text-email-date" type="text" id="nya" name="nombre" placeholder="Nombre" required> <br>
+            <input class="input-text-email-date" type="text" id="usuario" name="usuario"
+                placeholder="Nombre de usuario" requerid> <br>
+            <input class="input-text-email-date" type="email" id="email" name="email" placeholder="E-Mail" requerid> <br>
+            <label for="">Fecha de nacimiento</label> <br>
+            <input class="input-text-email-date" type="date" name="fecha" id="" > <br>
+            <input class="input-text-email-date" type="text" id="domicilio" name="domicilio" placeholder="Domicilio" requerid>
+            <br> <br>
+
+        </div>
+
+            <b>Perfil del usuario</b> <br><br>
+
+
+
+            <div class="perfil-usuario">
+
+
+
+                <div class="rb">
+                    <input type="radio" name="perfil" value="Comprador" id="Comprador"><label
+                        for="Comprador">Comprador</label>
+                </div>
+
+                <div class="rb">
+                    <input type="radio" name="perfil" value="Vendedor" id="Vendedor"><label
+                        for="Vendedor">Vendedor</label>
+                </div>
+
+
+            </div>
+
+            <br> <br>
+            <b>Intereses</b> <br><br>
+
+            <div class="intereses">
+
+                <div class="chk">
+
+                    <input type="checkbox" name="interes" value="Electro" id="electro"><label
+                        for="electro">Electro</label>
+
+                </div>
+
+                <div class="chk">
+
+
+                    <input type="checkbox" name="interes" value="Moda" id="Moda"><label for="Moda">Moda</label>
+
+                </div>
+
+                <div class="chk">
+
+
+
+                    <input type="checkbox" name="interes" value="Hogar" id="Hogar"><label for="Hogar">Hogar</label>
+
+                </div>
+
+                <div class="chk">
+
+
+
+                    <input type="checkbox" name="interes" value="Jugueteria" id="Juguetería"><label
+                        for="Jugueteria">Jugueteria</label>
+
+                </div>
+
+                <div class="chk">
+
+
+
+                    <input type="checkbox" name="interes" value="Vidasana" id="Vidasana"><label
+                        for="Vidasana">Vidasana</label>
+
+                </div>
+
+
+            </div>
+
+            <br><br>
+
+            <b>Elegí tu foto de usuario</b> <br> <br>
+            <input class="foto" type="file" name="fotoperfil" id="fotoperfil" placeholder="Seleccionar archivo">
+            <br><br>
+
+            <input class="input-text-email-date" type="password" id="contrasenia" name="password"
+                placeholder="Elegí tu contraseña"> <br>
+            <input class="input-text-email-date" type="password" id="contraseniarepetida" name="confirmPassword"
+                placeholder="Confirmá tu contraseña"> <br>
+
+            <p>
+                <button type="submit">ENVIAR</button>
+                <button type="reset" id="reset">BORRAR</button>
+            </p>
+
+        </form>
+
+
+    </main>
+
+    <%- include('./partials/footer') %>
+
+
+
+</body>
+
+</html>
