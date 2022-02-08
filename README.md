@@ -16,10 +16,10 @@
 git clone https://github.com/ruizandino/TP_DH.git
 ~~~
 
-2. Ingresar al directorio del proyecto:
+2. Ingresar o la carpeta raiz del proyecto:
 
 ~~~
-cd TP_DH/MercadoLiebre
+cd MercadoLiebre
 ~~~
 
 3. Instalar las dependencias necesarias, listadas en package.json:
